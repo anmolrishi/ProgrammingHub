@@ -1,9 +1,8 @@
 num = int(input("How many fibonacci numbers?")
-
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(num)))
+          
+def Fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return Fibonacci(n-1) + Fibonacci(n-2)
+print('Fibonacci = ' + str(Fibonacci(10)) )
