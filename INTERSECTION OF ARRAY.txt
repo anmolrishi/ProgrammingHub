@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+	
+	int n;cin>>n;
+	int A[n+5];
+	for(int i=1;i<=n;++i) cin>>A[i];
+	int m;cin>>m;
+	int B[m+5];
+	for(int i=1;i<=m;++i) cin>>B[i];
+	
+	for(int i=n,j=m;j>0 and i>0;--i,--j){
+		if(A[i]==B[j]) continue;
+		cout<<A[i];
+		break;
+	}
+	
+	return 0;
+}
