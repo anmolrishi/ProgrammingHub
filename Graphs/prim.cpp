@@ -12,9 +12,9 @@ void prim(int nodes){
 	priority_queue< iPair, vector <iPair> , greater<iPair> > pq; 
 	// Taking vertex 1 as source
 	int src = 1; 
-	int dist[nodes]; //to store the weight of the nodes
-	int vis[nodes]; //Whether the vertices has included in mst or not.
-	int parent[nodes]; //to store the parent , which represent mst.
+	int dist[nodes+1]; //to store the weight of the nodes
+	int vis[nodes+1]; //Whether the vertices has included in mst or not.
+	int parent[nodes+1]; //to store the parent , which represent mst.
 	for(int i = 1;i<=nodes;i++){
 		dist[i] = INT_MAX;
 		vis[i] = 0;
@@ -48,17 +48,12 @@ void prim(int nodes){
 }
 
 int main(){
-	#ifndef ONLINE_JUDGE
-        freopen("int.txt", "r", stdin);
-        freopen("out1.txt", "w", stdout);
-    #endif
-
 	int nodes , edges;
-	// cout<<"Enter the number of nodes"<<endl;
+	cout<<"Enter the number of nodes"<<endl;
 	cin>>nodes;
-	// cout<<"Enter the number of edges"<<endl;
+	cout<<"Enter the number of edges"<<endl;
 	cin>>edges;
-	// cout<<"Enter the edges and its corresponding weight";
+	cout<<"Enter the edges and its corresponding weight";
 	for(int i = 0;i<edges;i++){
 		int u,v,w;
 		cin>>u>>v>>w;
