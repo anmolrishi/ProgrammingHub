@@ -1,9 +1,9 @@
 str = "abc def"
-spnum = str.count(' ') #count the number of spaces
+spnum = str.count(' ') # counting the number of spaces
 splitlist = []
 rslist = []
-splitlist = str.split(' ',spnum) #split the string
+splitlist = str.split(' ',spnum) # split string and save in a list
 for i in range(len(splitlist)):
     rs = splitlist[i][::-1]
-    rslist.append(rs) # reverse and to the list
-print ' '.join(rslist) # join and print the output or can save into one variables
+    rslist.append(rs) # reverse the string and save
+print ' '.join(rslist) # join the list or save to a variable
