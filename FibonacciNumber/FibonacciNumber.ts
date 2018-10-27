@@ -1,4 +1,4 @@
-class FibonacciNumbers {
+class FibonacciNumber {
     public Generate(count: number) {
         if (count < 2) {
             return count;
