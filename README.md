@@ -9,6 +9,6 @@ Yazılımcıların faydası için.
 
 #### Katkılara her zaman açığız. Dil fark etmez. Sadece bir algoritma uyguladığından emin ol.
 
-#### Pull request oluşturmak için özgürsün. Eğer spam değil ise, onaylanacak ve dahil edilecek.
+#### Pull request oluşturmak için özgürsün. Eğer spam değil ise, onaylanacak ve bazen dahil edilecek.
 
 #### Mutlu Kodlamalar!
