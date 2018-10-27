@@ -1,14 +1,14 @@
 ## ProgrammingHub
-For the benefit of programmers.
+Yazılımcıların faydası için.
 
-### If you are looking for a public repository to contribute. This is the place to be!
+### Eğer herkese açık katkıda bulunacak bir proje arıyorsanız. Burası aradığınızı yapabileceğiniz yer!
 
-#### Contribute to Open source and make the world a better place. You can create new folders if you want to. But take special care while naming them. Programmers need not be descriptive but when it comes to being organised, hell yeah.
+#### Açık Kaynak'a katkıda bulun ve dünyayı daha güzel bir yer yap. Eğer istersen yeni bir dosya oluşturabilirsin. Ama isimlendirirken özel bir çaba göstermelisin. Yazılımcıların açıklayıcı olmasına gerek yok fakat organize bir şekilde olması gerekiyor, işte bu.
 
-#### You can create your own issues.
+#### Kendi sorununu oluşturabilirsin.
 
-#### Contributions are always welcome. Language doesn't matter. Just make sure you're implementing an algorithm.
+#### Katkılara her zaman açığız. Dil fark etmez. Sadece bir algoritma uyguladığından emin ol.
 
-#### Feel free to create a pull request. If it is not a spam, it will be accepted and sometimes merged.
+#### Pull request oluşturmak için özgürsün. Eğer spam değil ise, onaylanacak ve dahil edilecek.
 
-#### Happy Coding!
+#### Mutlu Kodlamalar!
