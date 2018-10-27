@@ -1,0 +1,90 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long int ll;
+vector<pair<ll,ll> >adj[100001];
+vector<pair<ll,ll> >re[100001];
+ll dist[10005];
+ll redist[10005];
+bool vis[10005];
+ll n,m,k,s,t,d,x,y,w;
+void dij(){
+memset(vis,false,sizeof vis);
+multiset<pair<ll , ll> >o;
+dist[s]=0;
+o.insert({0,s});
+while(!o.empty()){
+    pair<ll,ll>p =*o.begin();
+    o.erase(o.begin());
+    if(vis[p.second])continue;
+    ll e=p.second; ll q=p.first;
+    vis[e]=true;
+    ll i;
+    for(i=0;i<adj[e].size();++i){
+            ll z=adj[e][i].second;ll u=adj[e][i].first;
+        if(dist[z]>dist[e]+u){
+            dist[z]=dist[e]+u;
+            o.insert({dist[z],z});
+        }
+    }
+}
+
+}
+void rdij(){
+memset(vis,false,sizeof vis);
+multiset<pair<ll , ll> >o;
+redist[t]=0;
+o.insert({0,t});
+while(!o.empty()){
+    pair<ll,ll>p =*o.begin();
+    o.erase(o.begin());
+    if(vis[p.second])continue;
+    ll e=p.second; ll q=p.first;
+    vis[e]=true;
+    ll i;
+    for( i=0;i<re[e].size();i++){
+            ll z=re[e][i].second;ll u=re[e][i].first;
+        if(redist[z]>redist[e]+u){
+            redist[z]=redist[e]+u;
+            o.insert({redist[z],z});
+        }
+    }
+}
+
+}
+
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    cin>>d;
+    while(d--){
+            cin>>n>>m>>k>>s>>t;
+           for(int i=1;i<=m;i++){
+            cin>>x>>y>>w;
+            adj[x].push_back({w,y});
+            re[y].push_back({w,x});
+           }
+           for(int i=1;i<10005;i++){
+                dist[i]=3000000000;
+                redist[i]=3000000000;
+                 vis[i]=false;}
+                 dij();
+                 memset(vis,false,sizeof vis);
+                 rdij();
+
+                 ll large=dist[t];
+                 for(int i=0;i<k;i++){
+                cin>>x>>y>>w;
+                large=min(large,min(dist[x]+redist[y]+w,dist[y]+redist[x]+w));
+
+}
+    if(large>=3000000000)cout<<"-1"<<endl;
+    else cout<<large<<endl;
+    for(int i=1;i<=n;i++){
+        adj[i].clear();
+        re[i].clear();
+    }
+    }
+	return 0;
+}
