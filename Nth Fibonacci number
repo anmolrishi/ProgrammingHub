@@ -1,0 +1,16 @@
+def fibo():
+    a = 0
+    b = 1
+    _temp = [0, 1]
+    n = int(input(" n? :  "))
+
+    while (n):
+        c = a + b
+        a = b
+        b = c
+        _temp.append(c)
+        n = n - 1
+
+    print(_temp[len(_temp) - 3])
+
+fibo()

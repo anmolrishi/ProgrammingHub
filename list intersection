@@ -1,0 +1,11 @@
+a = input('List 1 elements ? : ').split()
+b = input('List 2 elements ? : ').split()
+c = []
+i = 0
+while i < len(a):
+    if a[i] in b:
+        c.append(a[i])
+        i += 1
+    else:
+        i += 1
+print(c)
