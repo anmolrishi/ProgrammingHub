@@ -10,17 +10,31 @@ int temp=*a;
 *b=temp;
 }
 
-int partition(int a[], int start, int e){
-int pivot = a[e];
-int i=start-1,
-j=start;
-while(j<e){
-    if(a[j]<pivot){
-        i++;
-        swap(&a[i],&a[j]);
-    }
-    j++;
-}
+int partition(int arr[], int low, int high) 
+{ 
+    int pivot = arr[low]; 
+    int i = low - 1, j = high + 1; 
+   
+    while (true) 
+    { 
+
+        do
+        { 
+            i++; 
+        } while (arr[i] < pivot); 
+
+        do
+        { 
+            j--; 
+        } while (arr[j] > pivot); 
+
+        if (i >= j) 
+            return j; 
+   
+        swap(arr[i], arr[j]); 
+    } 
+} 
+  
 swap(&a[i+1],&a[e]);
 return i+1;
 }
@@ -70,7 +84,7 @@ void bsort(int a[],int n){
     for(int i=0;i<n;i++){
         for(int j=0;j<n-i;j++){
             if(a[j]>a[j+1]){
-                swap(&a[i],&a[j]);
+                swap(&a[j],&a[j+1]);
             }
         }
     }

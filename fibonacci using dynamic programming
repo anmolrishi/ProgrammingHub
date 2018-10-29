@@ -1,0 +1,27 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+vector<long int>dp;
+void f()
+{
+for(int i=0;i<100;i++)
+    dp[i]=0;
+}
+long int fib(int n)
+{
+    if(!dp[n])
+    {
+        if(n<=1)
+            dp[n]=n;
+        else
+            dp[n]=fib(n-1)+fib(n-2);
+    }
+    return dp[n];
+}
+int main()
+{
+    long int n;
+    f();
+    cin>>n;
+   cout<<fib(n);
+}
