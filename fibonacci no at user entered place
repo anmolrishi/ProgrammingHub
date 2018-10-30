@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int fib(int x);
+int c;
+int n;
+int a=0,b=1,temp;
+int main()
+{
+	//clrscr();
+	//int temp,i=1;
+	cout<<"enter limit";
+	cin>>c;
+	fib(c);
+	cout<<"\n"<<n;
+}
+int fib(int x)
+{
+	int i;
+	for(i=0;i<x;i++)		
+	{	temp=a;
+		a=a+b;
+		b=temp;
+		n=a;
+
+	}
+}
