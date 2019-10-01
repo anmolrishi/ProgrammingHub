@@ -1,0 +1,85 @@
+#include<bits/stdc++.h>
+#include<stdlib.h>
+void do_merge(int a[],int,int);
+void do_sorting(int a[],int,int,int);
+using namespace std;
+int main()
+{
+    int n,i;
+    cout<<"Enter number of elements\n";
+    cin>>n;
+    int *a=(int *)malloc(n*sizeof(int));
+    cout<<"Enter elements\n";
+     for(int l=0;l<n;l++)
+    {
+        cin>>a[l];
+    }
+    do_merge(a,0,n-1);
+    cout<<"Sorted list is given below\n";
+    for(int l=0;l<n;l++)
+    {
+        cout<<a[l]<<"  ";
+    }
+}
+void do_merge(int a[],int s,int e)
+{
+    int m;
+
+    if(s<e)
+    {
+     m=(s+e)/2;
+     do_merge(a,s,m);
+     do_merge(a,m+1,e);
+     do_sorting(a,s,m,e);
+
+    }
+
+
+
+}
+void do_sorting(int a[],int s,int m,int e)
+{
+    int i,j;
+    i=s;
+    //m=(s+e)/2;
+    j=m+1;
+    int c=0;
+    int temp[s+e+1];
+    while(i<=m && j<=e)
+    {
+        if(a[i]>a[j])
+        {
+            temp[c]=a[j];
+            j++;
+            c++;
+        }
+        else
+        {
+            temp[c]=a[i];
+            i++;
+            c++;
+        }
+
+    }
+    while(i<=m)
+    {
+        temp[c]=a[i];
+        i++;
+        c++;
+    }
+    while(j<=e)
+    {
+        temp[c]=a[j];
+        j++;
+        c++;
+    }
+    int k=0;
+    for(int l=s;l<=e;l++)
+    {
+        a[l]=temp[k++];
+
+    }
+
+}
+
+
