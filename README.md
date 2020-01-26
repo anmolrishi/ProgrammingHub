@@ -12,5 +12,3 @@ For the benefit of programmers.
 #### Feel free to create a pull request. If it is not a spam, it will be accepted and sometimes merged.
 
 #### Happy Coding!
-
-[![button](http://www.presentationpro.com/images/product/medium/slide/PPP_CGENE_LT3_Presentation-PowerPoint-Slide-Graphic_Push_Button_Up.jpg)](https://mattermost.com)
