@@ -7,6 +7,9 @@ For the benefit of programmers.
 
 #### You can create your own issues.
 
+#### Great place to start your code
+
+
 #### Contributions are always welcome. Language doesn't matter. Just make sure you're implementing an algorithm.
 
 #### Feel free to create a pull request. If it is not a spam, it will be accepted and sometimes merged.
