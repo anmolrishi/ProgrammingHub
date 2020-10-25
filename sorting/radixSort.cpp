@@ -1,7 +1,8 @@
+//c++ program for radix sort
 #include<iostream>
 
 using namespace std;
-
+//this function is used to divide the value and we get a new digit
 int getMaxDivision(int value)
 {
     int count = 0;
@@ -12,7 +13,7 @@ int getMaxDivision(int value)
     }
     return count;
 }
-
+//evaluates the remainder
 int divideTimes(int value,int times)
 {
     int temp = value;
@@ -83,7 +84,7 @@ int main()
             }
         }
     }
-
+    //display
     cout<<"Sorted Array is: "<<endl;
     for(index = 0; index <arraySize; index++)
     {
